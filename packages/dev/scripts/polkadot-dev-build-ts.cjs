@@ -10,10 +10,7 @@ const path = require('path');
 const copySync = require('./copySync.cjs');
 const execSync = require('./execSync.cjs');
 
-const CONFIGS = ['babel.config.js', 'babel.config.cjs'];
-const CPX = ['css', 'gif', 'hbs', 'jpg', 'js', 'json', 'png', 'svg', 'd.ts']
-  .map((ext) => `src/**/*.${ext}`)
-  .concat('package.json');
+const CPX = ['css', 'gif', 'hbs', 'jpg', 'js', 'json', 'png', 'svg', 'd.ts'].map((e) => `src/**/*.${e}`);
 
 console.log('$ polkadot-dev-build-ts', process.argv.slice(2).join(' '));
 
@@ -22,25 +19,33 @@ function buildWebpack () {
 }
 
 async function buildBabel (dir) {
-  const configs = CONFIGS.map((c) => path.join(process.cwd(), `../../${c}`));
-  const babelConfig = configs.find((f) => fs.existsSync(f)) || configs[0];
+  await Promise.all(
+    ['cjs', 'esm'].map(async (type) => {
+      const buildDir = `build/${type}`;
+      const outDir = path.join(process.cwd(), buildDir);
 
-  await babel({
-    babelOptions: {
-      configFile: babelConfig
-    },
-    cliOptions: {
-      extensions: ['.ts', '.tsx'],
-      filenames: ['src'],
-      ignore: '**/*.d.ts',
-      outDir: path.join(process.cwd(), 'build'),
-      outFileExtension: '.js'
-    }
-  });
+      await babel({
+        babelOptions: {
+          configFile: `@polkadot/dev/config/babel-config-${type}.cjs`
+        },
+        cliOptions: {
+          extensions: ['.ts', '.tsx'],
+          filenames: ['src'],
+          ignore: '**/*.d.ts',
+          outDir,
+          outFileExtension: '.js'
+        }
+      });
 
-  [...CPX]
-    .concat(`../../build/${dir}/src/**/*.d.ts`, `../../build/packages/${dir}/src/**/*.d.ts`)
-    .forEach((src) => copySync(src, 'build'));
+      fs.writeFileSync(path.join(outDir, 'package.json'), `{"type":"${type === 'cjs' ? 'commonjs' : 'module'}"}`);
+
+      [...CPX]
+        .concat(`../../build/${dir}/src/**/*.d.ts`, `../../build/packages/${dir}/src/**/*.d.ts`)
+        .forEach((src) => copySync(src, buildDir));
+    })
+  );
+
+  copySync('package.json', 'build');
 }
 
 async function buildJs (dir) {
