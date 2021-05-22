@@ -6,7 +6,7 @@
 const execSync = require('./execSync');
 const rimraf = require('rimraf');
 
-console.log('$ polkadot-ci-ghpages-force', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-ci-ghpages-force', process.argv.slice(2).join(' '));
 
 // ensure we are on master
 execSync('git checkout master');

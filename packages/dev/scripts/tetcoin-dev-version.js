@@ -16,7 +16,7 @@ const { type } = require('yargs')
   .strict()
   .argv;
 
-console.log('$ polkadot-dev-version', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-dev-version', process.argv.slice(2).join(' '));
 
 const args = ['version', type]
   .concat(
@@ -26,5 +26,5 @@ const args = ['version', type]
   )
   .concat(['--yes', '--exact', '--no-git-tag-version', '--no-push', '--allow-branch', '"*"']);
 
-execSync(`yarn polkadot-exec-lerna ${args.join(' ')}`);
+execSync(`yarn tetcoin-exec-lerna ${args.join(' ')}`);
 execSync('yarn install');

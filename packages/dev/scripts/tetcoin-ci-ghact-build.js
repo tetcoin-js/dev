@@ -23,10 +23,10 @@ const token = process.env.GH_PAT || `x-access-token:${process.env.GITHUB_TOKEN}`
 const repo = `https://${token}@github.com/${process.env.GITHUB_REPOSITORY}.git`;
 const hasLerna = fs.existsSync('lerna.json');
 
-console.log('$ polkadot-ci-ghact-build', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-ci-ghact-build', process.argv.slice(2).join(' '));
 
 function runClean () {
-  execSync('yarn polkadot-dev-clean-build');
+  execSync('yarn tetcoin-dev-clean-build');
 }
 
 function runCheck () {
@@ -61,16 +61,16 @@ function lernaBump () {
 
   if (isBeta) {
     // if we have a beta version, just continue the stream of betas
-    execSync('yarn run polkadot-dev-version --type prerelease');
+    execSync('yarn run tetcoin-dev-version --type prerelease');
   } else if (argv['skip-beta']) {
     // don't allow beta versions
-    execSync('yarn polkadot-dev-version --type patch');
+    execSync('yarn tetcoin-dev-version --type patch');
   } else if (patch === '0') {
     // patch is .0, so publish this as an actual release (surely we did out job on beta)
-    execSync('yarn polkadot-dev-version --type patch');
+    execSync('yarn tetcoin-dev-version --type patch');
   } else if (patch === '1') {
     // continue with first new minor as beta
-    execSync('yarn polkadot-dev-version --type preminor');
+    execSync('yarn tetcoin-dev-version --type preminor');
   } else {
     // some changes, so we can commit
     fs.appendFileSync(path.join(process.cwd(), '.123trigger'), lernaGetVersion());

@@ -8,7 +8,7 @@ const execSync = require('./execSync');
 const token = process.env.GH_PAT || `x-access-token:${process.env.GITHUB_TOKEN}`;
 const repo = `https://${token}@github.com/${process.env.GITHUB_REPOSITORY}.git`;
 
-console.log('$ polkadot-ci-ghact-docs', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-ci-ghact-docs', process.argv.slice(2).join(' '));
 
 execSync('git config push.default simple');
 execSync('git config merge.ours.driver true');
@@ -18,4 +18,4 @@ execSync('git checkout master');
 
 execSync('yarn run docs');
 
-execSync(`yarn polkadot-exec-ghpages --dotfiles --repo ${repo} --dist ${process.env.GH_PAGES_SRC} --dest .`, true);
+execSync(`yarn tetcoin-exec-ghpages --dotfiles --repo ${repo} --dist ${process.env.GH_PAGES_SRC} --dest .`, true);

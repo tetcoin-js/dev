@@ -20,12 +20,12 @@ function lerna_bump () {
   BETA=${LERNA_VERSION_PRE##*-}
 
   if [[ $BETA == *"beta"* ]]; then
-    yarn run polkadot-dev-version-beta
+    yarn run tetcoin-dev-version-beta
   else
     LAST=${BETA##*.}
 
     if [[ $LAST == "0" ]]; then
-      yarn run polkadot-dev-version-patch
+      yarn run tetcoin-dev-version-patch
     else
       yarn run lerna version preminor --preid beta --yes --no-git-tag-version --no-push --allow-branch '*'
     fi

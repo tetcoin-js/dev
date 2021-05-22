@@ -1,5 +1,5 @@
 {
-  "repository": "https://github.com/polkadot-js/dev",
+  "repository": "https://github.com/tetcoinjs/dev",
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "license": "Apache-2",
   "private": true,
@@ -10,16 +10,16 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "build": "polkadot-dev-build-ts && (cd packages/dev && copyfiles config/* scripts/* skeleton/* build)",
-    "build:release": "polkadot-ci-ghact-build --skip-beta",
-    "docs": "polkadot-dev-build-docs",
-    "lint": "polkadot-dev-run-lint",
-    "clean": "polkadot-dev-clean-build",
-    "postinstall": "./packages/dev/scripts/polkadot-dev-yarn-only.js",
-    "test": "polkadot-dev-run-test --coverage"
+    "build": "tetcoin-dev-build-ts && (cd packages/dev && copyfiles config/* scripts/* skeleton/* build)",
+    "build:release": "tetcoin-ci-ghact-build --skip-beta",
+    "docs": "tetcoin-dev-build-docs",
+    "lint": "tetcoin-dev-run-lint",
+    "clean": "tetcoin-dev-clean-build",
+    "postinstall": "./packages/dev/scripts/tetcoin-dev-yarn-only.js",
+    "test": "tetcoin-dev-run-test --coverage"
   },
   "devDependencies": {
-    "@polkadot/dev": "workspace:packages/dev",
+    "@tetcoin/dev": "workspace:packages/dev",
     "copyfiles": "^2.2.0"
   }
 }

@@ -12,10 +12,10 @@ const path = require('path');
 
 const CPX = ['package.json', 'src/**/*.css', 'src/**/*.gif', 'src/**/*.jpg', 'src/**/*.png', 'src/**/*.svg', 'src/**/*.d.ts', 'src/**/*.js'];
 
-console.log('$ polkadot-dev-build-ts', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-dev-build-ts', process.argv.slice(2).join(' '));
 
 function buildWebpack () {
-  execSync('yarn polkadot-exec-webpack --config webpack.config.js --mode production');
+  execSync('yarn tetcoin-exec-webpack --config webpack.config.js --mode production');
 }
 
 async function buildBabel (dir) {
@@ -40,7 +40,7 @@ async function buildJs (dir) {
   if (!fs.existsSync(path.join(process.cwd(), '.skip-build'))) {
     const { name, version } = require(path.join(process.cwd(), './package.json'));
 
-    if (!name.startsWith('@polkadot/')) {
+    if (!name.startsWith('@tetcoin/')) {
       return;
     }
 
@@ -59,11 +59,11 @@ async function buildJs (dir) {
 }
 
 async function main () {
-  execSync('yarn polkadot-dev-clean-build');
+  execSync('yarn tetcoin-dev-clean-build');
 
   process.chdir('packages');
 
-  execSync('yarn polkadot-exec-tsc --emitDeclarationOnly --outdir ../build');
+  execSync('yarn tetcoin-exec-tsc --emitDeclarationOnly --outdir ../build');
 
   const dirs = fs
     .readdirSync('.')
