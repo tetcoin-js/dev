@@ -3,11 +3,11 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "allowBranch": "master"
+      "allowBranch": "tet-0.52.6"
     }
   },
   "packages": [
     "packages/*"
   ],
-  "version": "0.52.7"
+  "version": "0.52.6"
 }

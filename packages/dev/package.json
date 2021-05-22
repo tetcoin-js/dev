@@ -1,6 +1,6 @@
 {
   "name": "@tetcoin/dev",
-  "version": "0.52.7",
+  "version": "0.52.8",
   "description": "A collection of shared CI scripts and development environment used by @tetcoin projects",
   "bin": {
     "tetcoin-ci-ghact-build": "./scripts/tetcoin-ci-ghact-build.js",
