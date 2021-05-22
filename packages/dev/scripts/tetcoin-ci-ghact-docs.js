@@ -14,7 +14,7 @@ execSync('git config push.default simple');
 execSync('git config merge.ours.driver true');
 execSync('git config user.name "Github Actions"');
 execSync('git config user.email "action@github.com"');
-execSync('git checkout master');
+execSync('git checkout tet-0.52.6');
 
 execSync('yarn run docs');
 

@@ -9,7 +9,7 @@ const rimraf = require('rimraf');
 console.log('$ tetcoin-ci-ghpages-force', process.argv.slice(2).join(' '));
 
 // ensure we are on master
-execSync('git checkout master');
+execSync('git checkout tet-0.52.6');
 
 // checkout latest
 execSync('git fetch');
@@ -33,4 +33,4 @@ execSync('git branch -m gh-pages');
 execSync('git push -f origin gh-pages');
 
 // switch to master
-execSync('git checkout master');
+execSync('git checkout tet-0.52.6');
