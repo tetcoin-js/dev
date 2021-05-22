@@ -1,9 +1,9 @@
 {
-  "extends": "@polkadot/dev/config/tsconfig.json",
+  "extends": "@tetcoin/dev/config/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@polkadot/dev/*": [ "packages/dev/src/*" ]
+      "@tetcoin/dev/*": [ "packages/dev/src/*" ]
     },
     "skipLibCheck": true,
     "typeRoots": [

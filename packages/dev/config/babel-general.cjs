@@ -6,7 +6,7 @@ module.exports = {
   // comments that allows usage info, which well, is quite useful
   // generatorOpts: {
   //   shouldPrintComment: (value) =>
-  //     value.includes('@polkadot') ||
+  //     value.includes('@tetcoin') ||
   //     value.includes('SPDX-License-Identifier')
   // }
 };

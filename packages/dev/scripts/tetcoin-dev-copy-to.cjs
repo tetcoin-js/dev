@@ -12,7 +12,7 @@ const execSync = require('./execSync.cjs');
 
 const args = process.argv.slice(2);
 
-console.log('$ polkadot-dev-copy-to', args.join(' '));
+console.log('$ tetcoin-dev-copy-to', args.join(' '));
 
 if (args.length !== 1) {
   throw new Error('Expected one <destination> argument');

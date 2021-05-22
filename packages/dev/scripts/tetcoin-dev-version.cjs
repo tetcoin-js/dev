@@ -29,7 +29,7 @@ function updateDependencies (dependencies, others, version) {
     }, {});
 }
 
-console.log('$ polkadot-dev-version', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-dev-version', process.argv.slice(2).join(' '));
 
 execSync(`yarn version ${type === 'pre' ? 'prerelease' : type}`);
 

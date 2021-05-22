@@ -100,9 +100,9 @@ module.exports = {
     'simple-import-sort/imports': [2, {
       groups: [
         ['^\u0000'], // all side-effects (0 at start)
-        ['\u0000$', '^@polkadot.*\u0000$', '^\\..*\u0000$'], // types (0 at end)
-        ['^[^/\\.]'], // non-polkadot
-        ['^@polkadot'], // polkadot
+        ['\u0000$', '^@tetcoin.*\u0000$', '^\\..*\u0000$'], // types (0 at end)
+        ['^[^/\\.]'], // non-tetcoin
+        ['^@tetcoin'], // tetcoin
         ['^\\.\\.(?!/?$)', '^\\.\\./?$', '^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'] // local (. last)
       ]
     }],

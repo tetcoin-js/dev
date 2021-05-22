@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Argv } from 'yargs';
-import type { BlahType } from '@polkadot/dev/types';
+import type { BlahType } from '@tetcoin/dev/types';
 import type { EchoString } from './types';
 
 import { foo } from './test1/foo';

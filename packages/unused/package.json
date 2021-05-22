@@ -1,5 +1,5 @@
 {
-  "name": "@polkadot/unused",
+  "name": "@tetcoin/unused",
   "version": "0.61.26",
   "description": "Dummy",
   "main": "index.js",
@@ -7,6 +7,6 @@
   "maintainers": [],
   "contributors": [],
   "license": "Apache-2.0",
-  "bugs": "https://github.com/polkadot-js/dev/issues",
-  "homepage": "https://github.com/polkadot-js/dev"
+  "bugs": "https://github.com/tetcoinjs/dev/issues",
+  "homepage": "https://github.com/tetcoinjs/dev"
 }

@@ -4,6 +4,6 @@
 
 const execSync = require('./execSync.cjs');
 
-console.log('$ polkadot-dev-run-prettier', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-dev-run-prettier', process.argv.slice(2).join(' '));
 
-execSync(`yarn polkadot-exec-prettier --write ${__dirname}`);
+execSync(`yarn tetcoin-exec-prettier --write ${__dirname}`);

@@ -10,7 +10,7 @@ const rimraf = require('rimraf');
 const copySync = require('./copySync.cjs');
 const execSync = require('./execSync.cjs');
 
-console.log('$ polkadot-dev-build-docs', process.argv.slice(2).join(' '));
+console.log('$ tetcoin-dev-build-docs', process.argv.slice(2).join(' '));
 
 function buildTypedoc (docRoot) {
   fs
@@ -22,7 +22,7 @@ function buildTypedoc (docRoot) {
       !fs.existsSync(path.join(dir, '.nodoc'))
     )
     .forEach(([full, dir]) => {
-      execSync(`yarn polkadot-exec-typedoc --theme markdown --out ${docRoot}/${dir} ${full}/src`);
+      execSync(`yarn tetcoin-exec-typedoc --theme markdown --out ${docRoot}/${dir} ${full}/src`);
     });
 }
 

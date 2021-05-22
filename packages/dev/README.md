@@ -1,6 +1,6 @@
-# @polkadot/dev
+# @tetcoin/dev
 
-A collection of shared CI scripts and development environment (configuration, dependencies) used by [@polkadot](https://polkadot.js.org) projects. Included here -
+A collection of shared CI scripts and development environment (configuration, dependencies) used by [@tetcoin](https://js.tetcoin.org) projects. Included here -
 
 - [style config](config/) Common configurations for [Babel](https://babeljs.io/), [ESLint](https://eslint.org/), [Jest](https://facebook.github.io/jest/).
 - [flow definitions](flow-typed/) A collection of 3rd-party [flow](https://flow.org/) definitions used by libraries and projects.

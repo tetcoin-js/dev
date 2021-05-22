@@ -11,7 +11,7 @@ module.exports = {
   includeDeclarations: false,
   module: 'commonjs',
   moduleResolution: 'node',
-  name: 'polkadot{.js}',
+  name: 'tetcoin{.js}',
   out: 'docs',
   stripInternal: 'true',
   theme: 'markdown'
