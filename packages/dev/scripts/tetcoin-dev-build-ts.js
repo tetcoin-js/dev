@@ -14,7 +14,7 @@ const path = require('path');
 const CPX = ['package.json', 'src/**/*.css', 'src/**/*.gif', 'src/**/*.jpg', 'src/**/*.png', 'src/**/*.svg', 'src/**/*.d.ts', 'src/**/*.js'];
 
 function buildWebpack () {
-  execSync(`${path.join(__dirname, 'polkadot-exec-webpack.js')} --config webpack.config.js --mode production`, { stdio: 'inherit' });
+  execSync(`${path.join(__dirname, 'tetcoin-exec-webpack.js')} --config webpack.config.js --mode production`, { stdio: 'inherit' });
 }
 
 async function buildBabel (dir) {
@@ -39,7 +39,7 @@ async function buildJs (dir) {
   if (!fs.existsSync(path.join(process.cwd(), '.skip-build'))) {
     const { name, version } = require(path.join(process.cwd(), './package.json'));
 
-    if (!name.startsWith('@polkadot/')) {
+    if (!name.startsWith('@tetcoin/')) {
       return;
     }
 
@@ -58,11 +58,11 @@ async function buildJs (dir) {
 }
 
 async function main () {
-  execSync(path.join(__dirname, 'polkadot-dev-clean-build.js'), { stdio: 'inherit' });
+  execSync(path.join(__dirname, 'tetcoin-dev-clean-build.js'), { stdio: 'inherit' });
 
   process.chdir('packages');
 
-  execSync(`${path.join(__dirname, 'polkadot-exec-tsc.js')} --emitDeclarationOnly --outdir ../build`, { stdio: 'inherit' });
+  execSync(`${path.join(__dirname, 'tetcoin-exec-tsc.js')} --emitDeclarationOnly --outdir ../build`, { stdio: 'inherit' });
 
   const dirs = fs
     .readdirSync('.')

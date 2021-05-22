@@ -23,7 +23,7 @@ function run_clean () {
   echo ""
   echo "*** Running clean"
 
-  yarn run polkadot-dev-clean-build
+  yarn run tetcoin-dev-clean-build
 
   echo ""
   echo "*** Checks completed"
@@ -84,19 +84,19 @@ function lerna_bump () {
 
   if [[ $TAG == *"beta"* ]]; then
     # if we have a beta version, just continue the stream of betas
-    yarn run polkadot-dev-version --type prerelease
+    yarn run tetcoin-dev-version --type prerelease
   else
     PATCH=${TAG##*.}
 
     if [ -n "$CI_NO_BETA" ]; then
       # don't allow beta versions
-      yarn run polkadot-dev-version --type patch
+      yarn run tetcoin-dev-version --type patch
     elif [[ $PATCH == "0" ]]; then
       # patch is .0, so publish this as an actual release (surely we did out job on beta)
-      yarn run polkadot-dev-version --type patch
+      yarn run tetcoin-dev-version --type patch
     elif [[ $PATCH == "1" ]]; then
       # continue with first new minor as beta
-      yarn run polkadot-dev-version --type preminor
+      yarn run tetcoin-dev-version --type preminor
     else
       echo "*** Not setting version, patch detected"
       echo "$LERNA_VERSION" >> .123trigger

@@ -1,25 +1,25 @@
 {
-  "name": "@polkadot/dev",
+  "name": "@tetcoin/dev",
   "version": "0.50.8",
-  "description": "A collection of shared CI scripts and development environment used by @polkadot projects",
+  "description": "A collection of shared CI scripts and development environment used by @tetcoin projects",
   "bin": {
-    "polkadot-ci-ghact-build": "./scripts/polkadot-ci-ghact-build.js",
-    "polkadot-ci-ghact-build.sh": "./scripts/polkadot-ci-ghact-build.sh",
-    "polkadot-ci-ghact-docs": "./scripts/polkadot-ci-ghact-docs.js",
-    "polkadot-ci-ghact-docs.sh": "./scripts/polkadot-ci-ghact-docs.sh",
-    "polkadot-ci-ghpages-force": "./scripts/polkadot-ci-ghpages-force.js",
-    "polkadot-ci-ghpages-force.sh": "./scripts/polkadot-ci-ghpages-force.sh",
-    "polkadot-dev-build-docs": "./scripts/polkadot-dev-build-docs.js",
-    "polkadot-dev-build-ts": "./scripts/polkadot-dev-build-ts.js",
-    "polkadot-dev-circular": "./scripts/polkadot-dev-circular.js",
-    "polkadot-dev-clean-build": "./scripts/polkadot-dev-clean-build.js",
-    "polkadot-dev-run-lint": "./scripts/polkadot-dev-run-lint.js",
-    "polkadot-dev-run-test": "./scripts/polkadot-dev-run-test.js",
-    "polkadot-dev-version": "./scripts/polkadot-dev-version.js",
-    "polkadot-dev-yarn-only": "./scripts/polkadot-dev-yarn-only.js"
+    "tetcoin-ci-ghact-build": "./scripts/tetcoin-ci-ghact-build.js",
+    "tetcoin-ci-ghact-build.sh": "./scripts/tetcoin-ci-ghact-build.sh",
+    "tetcoin-ci-ghact-docs": "./scripts/tetcoin-ci-ghact-docs.js",
+    "tetcoin-ci-ghact-docs.sh": "./scripts/tetcoin-ci-ghact-docs.sh",
+    "tetcoin-ci-ghpages-force": "./scripts/tetcoin-ci-ghpages-force.js",
+    "tetcoin-ci-ghpages-force.sh": "./scripts/tetcoin-ci-ghpages-force.sh",
+    "tetcoin-dev-build-docs": "./scripts/tetcoin-dev-build-docs.js",
+    "tetcoin-dev-build-ts": "./scripts/tetcoin-dev-build-ts.js",
+    "tetcoin-dev-circular": "./scripts/tetcoin-dev-circular.js",
+    "tetcoin-dev-clean-build": "./scripts/tetcoin-dev-clean-build.js",
+    "tetcoin-dev-run-lint": "./scripts/tetcoin-dev-run-lint.js",
+    "tetcoin-dev-run-test": "./scripts/tetcoin-dev-run-test.js",
+    "tetcoin-dev-version": "./scripts/tetcoin-dev-version.js",
+    "tetcoin-dev-yarn-only": "./scripts/tetcoin-dev-yarn-only.js"
   },
   "keywords": [
-    "Polkadot"
+    "Tetcoin"
   ],
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "maintainers": [
@@ -34,12 +34,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polkadot-js/dev.git"
+    "url": "git+https://github.com/tetcoinjs/dev.git"
   },
   "bugs": {
-    "url": "https://github.com/polkadot-js/dev/issues"
+    "url": "https://github.com/tetcoinjs/dev/issues"
   },
-  "homepage": "https://github.com/polkadot-js/dev#readme",
+  "homepage": "https://github.com/tetcoinjs/dev#readme",
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
